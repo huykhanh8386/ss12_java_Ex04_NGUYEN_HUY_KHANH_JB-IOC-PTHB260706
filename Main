@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("--- KHOI TAO 2 NHAN VAT GAME ---");
+        System.out.print("Nhap ten Warrior: ");
+        String warriorName = sc.nextLine();
+        System.out.print("Nhap HP Warrior: ");
+        int warriorHp = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Nhap ten Mage: ");
+        String mageName = sc.nextLine();
+        System.out.print("Nhap HP Mage: ");
+        int mageHp = sc.nextInt();
+        Warrior warrior = new Warrior(warriorName, warriorHp);
+        Mage mage = new Mage(mageName, mageHp);
+        System.out.println();
+        System.out.println("+-------------------------------------------------------+");
+        System.out.println("|             DAU TRUONG NHAN VAT RIKKEI RPG            |");
+        System.out.println("+-------------------------------------------------------+");
+        warrior.attack();
+        mage.attack();
+    }
+}
